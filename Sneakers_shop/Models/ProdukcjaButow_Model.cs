@@ -13,7 +13,7 @@ namespace Sneakers_shop.Models
 
         //Marka Butów
         [Required]
-        [StringLength(50)]
+        [StringLength(50)]  
         public string Prod_Marka { get; set; }
 
 
