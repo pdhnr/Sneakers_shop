@@ -12,14 +12,15 @@ namespace Sneakers_shop.Controllers
 
         public static List<Admin_Model> admin_ModelsList = context.admin_Models.ToList();
 
-        //public static List<Admin_Model> db = context.admin_Models.ToList();
+
 
 
 
         ////////////////////////////////////////////////////////////////////////
         //login//
 
-
+        /*
+         
         [HttpGet]
         public IActionResult login()
         {
@@ -48,14 +49,8 @@ namespace Sneakers_shop.Controllers
             }
             return View();
 
-            
-            
-            
-            /* if(ad != null) 
-             { 
-                 Session["Ad_Id"] = ad.Ad_Id.ToString();
-                 RedirectToAction("Create");
-             }*/
+         }  
+        */
 
 
 
@@ -64,12 +59,13 @@ namespace Sneakers_shop.Controllers
 
 
 
-        }
+    }
 
         ////////////////////////////////////////////////////////////////////////
+        /*
         public IActionResult Create()
         {
             return View();
         }
-    }
+        */
 }
