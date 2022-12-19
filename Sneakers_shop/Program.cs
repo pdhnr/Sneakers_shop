@@ -28,7 +28,7 @@ namespace Sneakers_shop
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Admin}/{action=login}/{id?}");
+                pattern: "{controller=ProdukcjaButow}/{action=Index}/{id?}");
 
             app.Run();
         }
