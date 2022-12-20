@@ -12,7 +12,7 @@ namespace Sneakers_shop.Models
         {
             var folder = Environment.SpecialFolder.LocalApplicationData;
             var path = Environment.GetFolderPath(folder);
-            DbPath = System.IO.Path.Join(path, "Sneakers_shop.db");
+            DbPath = System.IO.Path.Join(path, "SneakersShop.db");
         }
 
 
