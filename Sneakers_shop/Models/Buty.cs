@@ -3,13 +3,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Sneakers_shop.Models
 {
-    [Table("Produkcja butów")]
-    public class ProdukcjaButow_Model
+    [Table("Buty")]
+    public class Buty
     {
         //Klucz Glowny 
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Prod_Id { get; set; }
+        public int Id { get; set; }
 
 
         //Marka Butów
@@ -18,7 +17,7 @@ namespace Sneakers_shop.Models
         //[StringLength(50)]
         [MaxLength(50, ErrorMessage = "Zadługi tekst! W formularze, może wmieścić się do 50 symbolów.")]
         [MinLength(0, ErrorMessage = "Zakrutki tekst! Musisz wpisać nazwe marke butów.")]
-        public string Prod_Marka { get; set; }
+        public string Marka { get; set; }
 
 
         //Model Butów
@@ -27,19 +26,19 @@ namespace Sneakers_shop.Models
         //[StringLength(50)]
         [MaxLength(50, ErrorMessage = "Zadługi tekst! W formularze, może wmieścić się do 50 symbolów.")]
         [MinLength(0, ErrorMessage = "Zakrutki tekst! Musisz wpisać nazwe modele butów.")]
-        public string Prod_Model { get; set; }
+        public string Model { get; set; }
 
 
         //Rodzaj Butów
-        [Column("Rodzaj butów")]
-        [Required] 
-        public Erodzaj Prod_Rodzaj { get; set; }
+        //[Column("Rodzaj butów")]
+        //[Required] 
+        //public Erodzaj Rodzaj { get; set; }
 
 
         //Kolor Butów
-        [Column("Kolor butów")]
-        [Required]
-        public Ekolor Prod_Kolor { get; set; }
+        //[Column("Kolor butów")]
+        //[Required]
+        //public Ekolor Kolor { get; set; }
 
 
 
@@ -47,17 +46,14 @@ namespace Sneakers_shop.Models
         [Column("Cena butów")]
         [Required(ErrorMessage = "Proszę podać cenę butów, w punkcie \"Cena butów\"!")]
         [Range(0,1000000, ErrorMessage = "Proszę podać cenę butów, 0 - 1 000 000. W formularze \"Cena butów\"!")]
-        public double Prod_Cena { get; set; }
+        public double Cena { get; set; }
 
 
         
         //Photo Butów
-        /*
-        [Column("Zdjęcie butów")]
-        [Required(ErrorMessage = "Proszę przypnić zdjęcie, w formularze \"Zdjęcie butów\"!")]
-        public string Prod_Image { get; set; }
-        */
-
+        //[Column("Zdjęcie butów")]
+        //[Required(ErrorMessage = "Proszę przypnić zdjęcie, w formularze \"Zdjęcie butów\"!")]
+        //public string? Image { get; set; }
 
     }
 

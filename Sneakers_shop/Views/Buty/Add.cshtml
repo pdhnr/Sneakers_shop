@@ -1,0 +1,18 @@
+﻿@model Sneakers_shop.Models.Buty
+
+<h1>Dodawanie nowych butów</h1>
+
+<form asp-controller="Buty" asp-action="Add" method="post"> 
+    <div asp-validation-summary="All" class="text-danger"> </div>
+
+    <label asp-for="Marka">Marka: </label>
+    <input asp-for="Marka" type="text" class="form-control" />
+
+    <label asp-for="Model">Model: </label>
+    <input asp-for="Model" type="text" class="form-control" />
+
+    <label asp-for="Cena">Cena: </label>
+    <input asp-for="Cena" type="number" class="form-control" />
+
+    <button type="submit" class="btn btn-success"> Dodaj </button>
+</form>
