@@ -11,6 +11,7 @@
         <td>@element.Model</td>
         <!-- <td>  <div class="border border-success text-success" style="text-align:center;border-radius: 10px; margin: 5px;"> element. </div>  </td> -->
         <td>@element.Cena</td>
+            <td><a asp-controller="Buty" asp-action="Delete" asp-route-id=@element.Id class="btn btn-danger">Usuń</a></td>
     </tr>
 }
 </table>

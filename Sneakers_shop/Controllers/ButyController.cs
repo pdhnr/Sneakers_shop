@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Hosting;
 using Sneakers_shop.Models;
 using Sneakers_shop.Services;
@@ -21,6 +22,7 @@ namespace Sneakers_shop.Controllers
         //Dodawanie 
 
         [HttpGet]
+        [Authorize(Roles = "admin")]
         public IActionResult Add()
         {
             return View();
@@ -38,6 +40,14 @@ namespace Sneakers_shop.Controllers
             {
                 return View();
             }
+        }
+
+        [HttpGet]
+        [Authorize(Roles = "admin")]
+        public IActionResult Delete([FromRoute] int id)
+        {
+            _butyService.Delete(id);
+            return RedirectToAction(nameof(Index));
         }
     }
 }
